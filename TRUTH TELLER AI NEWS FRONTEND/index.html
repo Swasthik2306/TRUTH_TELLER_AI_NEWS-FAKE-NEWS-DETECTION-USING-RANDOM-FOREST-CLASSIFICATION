@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image.ico" type="image/x-icon">
+  <title>Registration Form</title>
+</head>
+<body>
+  <img src="background.png" alt="Background Image" class="background-image">
+  <img src="background2.png" alt="Background Image" class="background-image2">
+    <div class="nav"> 
+      <div class="nav-logo">
+        <p>Truth Teller AI News</p>
+    </div>
+    <div class="nav-button">
+        <button class="btn white" id="login" onclick="window.location.href='login.php'">Sign In</button>
+        <button class="btn" id="register">Sign Up</button>
+    </div> 
+  </div>
+   
+    <div id="reg"> 
+        <form action="register.php" method="post">
+            <input type="text" id="fname" name="first_name" placeholder="First Name" required><br>
+            <input type="text" id="lname" name="last_name" placeholder="Last Name"><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <select id="utype" name="user_type" required>
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select><br>
+            <input type="submit" value="Register" onclick="window.location.href='login.php'">
+            <div class="line"></div>
+            <p class="or-text">or</p>
+            <div class="regwith">
+              <p>SignUp with</p>
+            </div>
+        </form>
+      </div>
+    
+ 
+</body>
+</html>

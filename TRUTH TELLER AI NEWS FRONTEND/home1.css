@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@700&display=swap');
+
+.user-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.35rem;
+}
+
+nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Lora', serif;
+}
+
+/* Add underline effect */
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    background-color: #6389e9; /* Underline color */
+    transition: width 0.3s ease; /* Animation transition */
+}
+
+nav a::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+nav a:hover::before,
+nav li.active a::before {
+    width: 100%;
+}
+
+nav a:hover::after,
+nav li.active a::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #999999;
+}
+
+nav li.active a {
+    color: #999999; /* Change the text color for active item */
+}
+
+header h1 {
+    margin-left: 3rem;
+    font-size: 6rem; /* Adjust font size as needed */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*dashboard*/
+.back{
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+
+}
+
+.box{
+  width: 450px;
+  height: 450px;
+  margin-left: 45px;
+  position: relative;
+  background-color: #f6f6f68e;
+  border:solid 1px #000 ;
+  border-radius: 20px;
+}
+
+.boxa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  width: 450px;
+  height: 450px;
+  margin-left: 45px;
+  border-radius: 20px;
+  border:solid 1px #000 ;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora', serif;
+}
+
+
+.box h2{
+  
+  padding-left: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+.boxa h2{
+  padding-left: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#user-pie-chart {
+  position: relative;
+  width: 65%;
+  height: 65%;
+}
+
+#userPieChartCanvas {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+}
+
+
+
+.nav-menu1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 2.5rem;
+    
+}
+
+/* add news section*/
+
+.addnews-section{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+h1.nav-menu1 {
+    color: #333;
+    font-family: 'Lora', serif;
+}
+
+#news-form {
+    background: linear-gradient(45deg, #ffffff2c, #00000005);
+    padding: 20px;
+    padding-left: 5rem;
+    padding-right: 7rem;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.menu{
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Lora', serif;
+}
+
+.para-container{
+    margin: 25px;
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+}
+
+/* CSS FOR THE NEWS CARD*/
+.news-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 450px;
+    height: 300px;
+    margin-right: 31.3px;
+    margin-left: 31.3px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .news-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  
+  .news-card:not(:hover) {
+    transform: scale(1);
+    z-index: 0;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    transition: filter 0.3s ease-out;
+  }
+  
+  .news-card:not(:hover) .news-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+    transition: background 0.5s ease-out;
+  }
+  
+  .news-card:not(:hover) .news-content .news-summary {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s, opacity 0.3s ease-out;
+  }
+  
+  .news-card:hover .news-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    padding: 20px 20px 50px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    transition: background 0s, padding 0.3s ease-out;
+    z-index: 1;
+  }
+  
+  .news-card:hover .news-content .news-summary {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s ease-out;
+  }
+  
+  .news-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+  }
+  
+  .news-date {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+
+  }
+  
+  .news-summary {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+  }
+  
+.sub-title{
+    margin-left: 2rem;
+    font-size: 4rem; /* Adjust font size as needed */
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+.sub-title2{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem; /* Adjust font size as needed */
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.line {
+    position: absolute;
+    top: 108%;
+    height: 2px; /* Make the separator cover the entire height of the form */
+    width: 100%; /* Set the width of the separator line */
+    align-items: center;
+    justify-content: center;
+    background-color: grey; /* Set the background color of the separator */
+    content: ""; /* Required for pseudo-elements */
+    transform: translateY(-50%);
+}
+
+.viewmore{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    font-weight: 800;
+}
+
+/* advertisement*/
+
+.ad-container {
+   position: absolute;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .ad {
+    top: 1.5rem;
+    width: 70%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .ad-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    color: #000000;
+    transition: opacity 0.6s ease-out;
+  }
+  
+  .ad-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+  }
+  
+  .ad-summary {
+    margin: 5px 0 10px 0;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+  }
+/* logout button*/
+
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: 600;
+    background-color: #9999992b;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+
+.btn.white{
+    background-color: #4b4b4b;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background-color: #b4b4b4;
+    color: #000;
+    font-weight: 600;
+}
+
+/* ABOUT US */
+.back1 {
+    position: absolute;
+    width: 75%;
+    height: 375px;
+    border-radius: 25px;
+    margin-left: 2rem;
+    margin-top: -30px;
+    background:linear-gradient(-45deg,rgba(255, 255, 255, 0.116),rgba(78, 78, 78, 0.815));
+    filter: blur(10px);
+    
+}
+.back2 {
+    position: relative;
+    width: 75%;
+    height: 370px;
+    border-radius: 25px;
+    margin: 5% 10%;
+    background:linear-gradient(-45deg,rgba(255, 255, 255, 0.815),rgba(113, 113, 113, 0.116));
+   
+    
+}
+
+.aboutuspara{
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  font-size: 1.15rem;
+  font-family: 'Lora', serif;
+  color:#000000;
+}
+
+ /* social */
+ .social-icons {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffffff82;
+  box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.social-icon img {
+
+  width:100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.back3 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    margin: 0 auto; /* Add this line to center the table */
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 35px;
+    background:linear-gradient(-45deg,rgba(116, 116, 116, 0.815),rgba(160, 158, 170, 0.116));
+    
+}
+
+/* USER LIST */ 
+
+.user-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-card-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-card {
+  background-color: #81818180;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+}
+
+.user-card h2 {
+  margin-top: 0;
+}
+
+.user-card p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    flex-basis: 100%;
+  }
+}

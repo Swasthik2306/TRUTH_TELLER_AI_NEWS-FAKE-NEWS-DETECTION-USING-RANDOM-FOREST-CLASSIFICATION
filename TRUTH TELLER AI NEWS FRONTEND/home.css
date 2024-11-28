@@ -1,0 +1,151 @@
+/* Reset some default styles */
+body,html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #9cd7ff, #eaeeff); 
+   
+}
+
+/* Style the container */
+.header-nav-container {
+    display: flex;
+    align-items: center; /* Vertically center the header and nav */
+    color: #000000;
+    justify-content: space-between; /* Add space between header and nav */
+    padding: 10px 20px; /* Add some padding for spacing */
+    margin-top: 2rem;
+}
+
+/* Style the header */
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    margin-left: 3rem;
+    font-size: 1.75rem; /* Adjust font size as needed */
+}
+
+/* Style the navigation bar */
+nav {
+    color: #fff;
+    margin-right: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.35rem;
+}
+
+nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Add underline effect */
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    background-color: #6389e9; /* Underline color */
+    transition: width 0.3s ease; /* Animation transition */
+}
+
+nav a::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+nav a:hover::before,
+nav li.active a::before {
+    width: 100%;
+}
+
+nav a:hover::after,
+nav li.active a::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #999999;
+}
+
+nav li.active a {
+    color: #464646; /* Change the text color for active item */
+}
+
+
+
+
+/* add news section*/
+
+.addnews-section{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+h1.nav-menu1 {
+    color: #333;
+}
+
+form {
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 8%;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home1.css">
+    <link rel="icon" href="image.ico" type="image/x-icon">
+    <title>admin addads page</title>
+    <style>
+        body::-webkit-scrollbar {
+            width: 1px; /* Adjust the width as needed */
+        }
+    </style>
+    </head>
+<body>
+    <div class="header-nav-container">
+       
+        <nav class="user-nav">
+            <ul>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="addnews.html">Add News</a></li>
+                <li class="active"><a href="addads.html">Add Advertisement</a></li>
+                <li><a href="userprofile.php">User Profile</a></li>
+            </ul>
+        </nav>
+        <header>
+            <!-- Add the h1 heading on the leftmost side -->
+            <h1 class="logo">Truth Teller AI News</h1>
+        </header>
+    </div>
+
+    <div class="nav-button">
+        <button class="btn white" id="register"  onclick="window.location.href='login.php'">LOGOUT</button>
+    </div> 
+
+    <section id="addnews-section">
+        <h1 class="nav-menu1">Add Advertisement</h1>
+        <form id="news-form" action="addads.php" method="post" enctype="multipart/form-data">
+            <label for="news-title">Title of Advertise:</label>
+            <input type="text" id="news-title" name="news-title" required>
+    
+            <label for="news-media">Images or Videos Available:</label>
+            <input type="file" id="news-media" name="news-media" accept="image/*, video/*" capture="camera">
+    
+            <label for="news-summary">Summary of the Advertise:</label>
+            <textarea id="news-summary" name="news-summary" rows="4" required></textarea>
+    
+            <input type="submit" value="Submit Advertise">
+        </form>
+    </section>
+    <script src="admin_script.js"></script>
+</body>
+</html>
+
